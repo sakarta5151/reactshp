@@ -4,9 +4,8 @@ import { Navbar, Container, Nav, Row, Col} from 'react-bootstrap'
 import bg from './bg.png'
 import data from './data.js'
 import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom'
-import Detail from './Detail.jsx'
-
-
+import Detail from './routes/Detail.jsx'
+import Cart from './routes/cart.jsx'
 
 function App() {
 
@@ -51,7 +50,7 @@ function App() {
           </div>
         } />
         <Route path='/detail/:id' element={ <Detail shoes={shoes} /> } />
-       
+        <Route path='/cart' element={ <Cart/> } />
 
        
         <Route path='*' element={ <div>404 없는 페이지 입니다 </div> } />
@@ -61,7 +60,6 @@ function App() {
         </Route>
        
       </Routes>
-
 
       <Link to='/'>홈</Link>
       <p></p>
